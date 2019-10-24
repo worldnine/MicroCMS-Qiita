@@ -132,7 +132,7 @@ export async function setContext (app, context) {
 
       payload: context.payload,
       error: context.error,
-      base: '/MicroCMS-Qiita/',
+      base: '/MicroCMS-Qiita/dist/',
       env: {}
     }
     // Only set once
