@@ -66,7 +66,6 @@ export default {
     extend (config, ctx) {
     }
   },
-  routor:{
-    base: '/MicroCMS-Qiita/'
-  }
+  ...routerBase
+  
 }
