@@ -2,7 +2,8 @@
   <div class="items">
     <!-- itemsをforでまわし、itemにそれぞれのデータが入ります。 -->
     <div v-for="item in items" :key="item" class="item-box">
-      <div class="fresh"><a :href="item.url">{{ item.title }}</a></div>
+
+      <div class="fresh">{{item.date| moment}} <a :href="item.url" target="_blank">{{ item.title }}</a></div>
     </div>
   </div>
 </template>
@@ -10,8 +11,14 @@
 <script>
 // axiosの使用宣言
 import axios from 'axios'
+import moment from 'moment'
 
 export default {
+  filters: {
+   moment: function (date) {
+     return moment(date).format('YYYY/MM/DD');// eslint-disable-line
+      }
+    },
   data () {
     return {
       // 取得したデータを入れる
@@ -27,6 +34,7 @@ export default {
       items: data.contents
     }
   }
+  
 }
 </script>
 
