@@ -67,6 +67,6 @@ export default {
     }
   },
   routor:{
-    base:{/MicroCMS-Qiita/}
+    base: '/MicroCMS-Qiita/'
   }
 }
