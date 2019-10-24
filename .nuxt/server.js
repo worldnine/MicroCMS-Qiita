@@ -33,7 +33,7 @@ const createNext = ssrContext => (opts) => {
   }
   opts.query = stringify(opts.query)
   opts.path = opts.path + (opts.query ? '?' + opts.query : '')
-  const routerBase = '/MicroCMS-Qiita/dist/'
+  const routerBase = '/MicroCMS-Qiita/'
   if (!opts.path.startsWith('http') && (routerBase !== '/' && !opts.path.startsWith(routerBase))) {
     opts.path = urlJoin(routerBase, opts.path)
   }

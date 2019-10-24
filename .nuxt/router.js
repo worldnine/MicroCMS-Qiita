@@ -9,7 +9,7 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: decodeURI('/MicroCMS-Qiita/dist/'),
+  base: decodeURI('/MicroCMS-Qiita/'),
   linkActiveClass: 'nuxt-link-active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
